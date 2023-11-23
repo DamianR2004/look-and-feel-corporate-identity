@@ -13,7 +13,6 @@
     list-style: none;
     line-height: 1.5em;
     font-weight: 400;
-    font-size: var(--fontP);
     text-decoration: none;
    
 
@@ -21,17 +20,19 @@
 
 
 
-
 :root{ 
     --PrimaryColor0: #F7A100;
+    --PrimaryColor2: #F7A100;
     --PrimaryColor10: #F8c463;
     --SecondaryBackground: #FFFFFF;
+    --TextColorInverted: #FFFFFF;
     --Gallery0: #EDEDED;
     --Gallery1: #CCCCCC;
     --TextColor: #333333;
     --TextAlt: #0071B3;
     --fontP: 16px;
-    --fontH1: 34px;
+    --fontH1: 45px;
+    --fontH2: 34px;
     --fontH3: 24px;
     --Darkmode0: #121212;
     --Darkmode10: #181818;
@@ -44,31 +45,29 @@
 @media (prefers-color-scheme: dark) {
 
     :root{
-    --PrimaryColor0: #F7A100;
+    --PrimaryColor0: #282828;
+    --PrimaryColor2: #F7A100;
     --PrimaryColor10: #F8c463;
-    --SecondaryBackground: #FFFFFF;
-    --Gallery0: #EDEDED;
+    --SecondaryBackground: #121212;
+    --Gallery0: #282828;
     --Gallery1: #CCCCCC;
-    --TextColor: #333333;
-    --TextAlt: #0071B3;
+    --TextColor: #FFFFFF;
+    --TextColorInverted: #FFFFFF;
+    --TextAlt: #f7a100;
     --fontP: 16px;
-    --fontH1: 34px;
+    --fontH1: 45px;
+    --fontH2: 34px;
     --fontH3: 24px;
     --Darkmode0: #121212;
     --Darkmode10: #181818;
     --Darkmode20: #404040;
     --Darkmode30: #282828;
-    }
 
 
-    body {
-        background: var(--Darkmode0);
-    }
-    .avatars h2{
-        color: var(--SecondaryBackground);
-    }  
-    .houses {
-    background: var(--Darkmode10);
+}
+
+body{
+    background-color: var(--Darkmode0);
 }
 }
 
@@ -76,7 +75,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--PrimaryColor0);
+    background-color: var(--PrimaryColor2);
     width: 100%;
     height: 62px;
 }
@@ -87,7 +86,7 @@ header img{
 }
 
 svg {
-    fill: var(--SecondaryBackground);
+    fill: var(--TextColorInverted);
 }
 
 .rechtermenu ul{
@@ -101,6 +100,7 @@ svg {
     justify-content: center;
 }
  
+
 .left{
     display: flex;
     align-items: center;
@@ -108,11 +108,9 @@ svg {
 
 .rechtermenu a{
     text-decoration: none;
-    color: var(--SecondaryBackground);
+    color: var(--TextColorInverted);
 
 }
-
-
 
 
 
@@ -143,7 +141,7 @@ svg {
 
 .hoofdmenu a{
     position: relative;
-    color: var(--SecondaryBackground);
+    color: var(--TextColorInverted);
     text-decoration: none;
     
 }
@@ -158,44 +156,56 @@ header button{
 
 }
 
+.add-button{
+    height: 60px;
+    width: 90px;
+    cursor: pointer;
+    background: var(--Gallery0);
+    color: var(--TextColor);
+    border: solid 2px var(--PrimaryColor2);
+    padding: 5px 5px;
+    border-radius: 3px;
+
+}
 
 
 
 .avatars {
     display: flex;
     justify-content: center;
-    height: 8vh;
-    width: 100%;
-    gap: 10px;
     margin-top: 4em;
-    border: 6px solid var(--PrimaryColor0);
+    gap: 20px;
+    border: 6px solid var(--PrimaryColor2);
     padding-bottom: 20px;
     border-left: solid var(--SecondaryBackground);
-    border-right: solid var(--SecondaryBackground);
+    border-right: solid var(--S);
     border-top: 1em;
 
 }
 
-.add-button{
-    border: none;
-    background-color: transparent;
-   
+
+.avatars img{
+    height: 70px;
+    width: 70px;
+    border: solid 2px var(--Darkmode20);
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
 
 .filter{
     margin-top: 1em;
+    margin-left: 2.8em;
     padding: 5px
 
 }
 
 
-.avatars h2{
-    position: absolute;
-    left: 0em;
-    margin: 5px;
-    top: 2.7em;
-    font-size: 1.5em;
-    
+.fav h2{
+    display: flex;
+    justify-content: center;
+    margin: 70px;
+    font-size: var(--fontH1);
+    color: var(--TextColor);
 }
 
 
@@ -208,9 +218,13 @@ header button{
 }
 
 
+.houses li{
+    color: var(--TextColor);
+}
 
-
-
+.houses a{
+    color: var(--TextAlt);
+}
 
 .avatarhouse11{
     padding: 10px;
@@ -219,19 +233,6 @@ header button{
     width: 100%;
     max-width:40px; 
 }
-
-
-.raadhuisstraat li{
-    
-    margin: 10px;
-    
-}
-
-.raadhuisstraat p{
-    padding: 10px;
-    
-}
-
 
 
 .raadhuisstraatimg, .amsterdamsewegimg, .bunschoterwegimg{   
@@ -251,8 +252,8 @@ header button{
 .miniavatar22{
     padding: 10px;
     float: right;
-    height: auto;
-    width: 100%;
+    height: 60px;
+    width: 60px;
     max-width:40px; 
 }
 
@@ -276,7 +277,7 @@ header button{
         max-width:40px; 
     }
             
-            @media screen and (max-width: 457px) {
+            @media screen and (min-width: 457px) {
                 .filter {
                     display: flex;
                     justify-content: start;
@@ -289,9 +290,17 @@ header button{
                     top: 2.7em;
                     font-size: 1.5em;
                 }
+
+                .houses{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 1.125em;
+                    padding: 50px;
                 }
                 
-                @media screen and (max-width: 950px) {
+            }
+                
+                @media screen and (min-width: 748px) {
                     .houses{
                         display: grid;
                         grid-template-columns: 1fr 1fr;
@@ -300,13 +309,11 @@ header button{
                     }
                 }
                 
-                @media screen and (max-width: 768px) {
+                @media screen and (min-width: 1366px) {
                     .houses{
                         display: grid;
-                        grid-template-columns: 1fr;
-                        gap: 3em;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        gap: 1.125em;
                         padding: 50px;
                     }
                 }
-
-            

@@ -8,21 +8,75 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Proxima Nova;
     list-style: none;
     line-height: 1.5em;
     font-weight: 400;
-    font-size: 16px;
+    font-size: var(--fontP);
     text-decoration: none;
    
 
+}
+
+
+
+
+:root{ 
+    --PrimaryColor0: #F7A100;
+    --PrimaryColor10: #F8c463;
+    --SecondaryBackground: #FFFFFF;
+    --Gallery0: #EDEDED;
+    --Gallery1: #CCCCCC;
+    --TextColor: #333333;
+    --TextAlt: #0071B3;
+    --fontP: 16px;
+    --fontH1: 34px;
+    --fontH3: 24px;
+    --Darkmode0: #121212;
+    --Darkmode10: #181818;
+    --Darkmode20: #404040;
+    --Darkmode30: #282828;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+
+    :root{
+    --PrimaryColor0: #F7A100;
+    --PrimaryColor10: #F8c463;
+    --SecondaryBackground: #FFFFFF;
+    --Gallery0: #EDEDED;
+    --Gallery1: #CCCCCC;
+    --TextColor: #333333;
+    --TextAlt: #0071B3;
+    --fontP: 16px;
+    --fontH1: 34px;
+    --fontH3: 24px;
+    --Darkmode0: #121212;
+    --Darkmode10: #181818;
+    --Darkmode20: #404040;
+    --Darkmode30: #282828;
+    }
+
+
+    body {
+        background: var(--Darkmode0);
+    }
+    .avatars h2{
+        color: var(--SecondaryBackground);
+    }  
+    .houses {
+    background: var(--Darkmode10);
+}
 }
 
 header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #F7A100;
+    background-color: var(--PrimaryColor0);
     width: 100%;
     height: 62px;
 }
@@ -33,7 +87,7 @@ header img{
 }
 
 svg {
-    fill: #ffffff;
+    fill: var(--SecondaryBackground);
 }
 
 .rechtermenu ul{
@@ -54,7 +108,7 @@ svg {
 
 .rechtermenu a{
     text-decoration: none;
-    color: white;
+    color: var(--SecondaryBackground);
 
 }
 
@@ -71,7 +125,7 @@ svg {
 
 .hoofdmenu{
     position: fixed;
-    background-color: #F7A100;
+    background-color: var(--PrimaryColor0);
     top: 0;
     bottom: 0;
     left:0;
@@ -89,7 +143,7 @@ svg {
 
 .hoofdmenu a{
     position: relative;
-    color: white;
+    color: var(--SecondaryBackground);
     text-decoration: none;
     
 }
@@ -114,9 +168,10 @@ header button{
     width: 100%;
     gap: 10px;
     margin-top: 4em;
-    border: 6px solid #F7A100;
+    border: 6px solid var(--PrimaryColor0);
     padding-bottom: 20px;
-    border-left: solid white;
+    border-left: solid var(--SecondaryBackground);
+    border-right: solid var(--SecondaryBackground);
     border-top: 1em;
 
 }
@@ -156,10 +211,6 @@ header button{
 
 
 
-.raadhuisstraat{
-    background-color: whitesmoke;
-    
-}
 
 .avatarhouse11{
     padding: 10px;
@@ -183,17 +234,17 @@ header button{
 
 
 
-.raadhuisstraatimg {   
+.raadhuisstraatimg, .amsterdamsewegimg, .bunschoterwegimg{   
         height: auto;
         width: 100%;
         max-width: 1440px;
-        border: solid 1px #F7A100;
+        border: solid 1px var(--PrimaryColor0);
     }
 
 
 
-.amsterdamseweg{
-    background-color: whitesmoke;
+.amsterdamseweg, .raadhuisstraat, .bunschoterweg{
+    background-color: var(--Gallery0);
     
 }
 
@@ -206,31 +257,16 @@ header button{
 }
 
 
-.amsterdamseweg li{
+.amsterdamseweg li, .bunschoterweg li, .raadhuisstraat li{
     
     margin: 10px;
     
 }
 
-.amsterdamseweg p{
+.amsterdamseweg p , .bunschoterweg p, .raadhuisstraat p{
     padding: 10px;
     
 }
-
-
-
-.amsterdamsewegimg {   
-        height: auto;
-        width: 100%;
-        max-width: 1440px;
-        border: solid 1px #F7A100;
-    }
-
-
-    .bunschoterweg{
-        background-color: whitesmoke;
-        
-    }
     
     .miniavatar2{
         padding: 10px;
@@ -239,59 +275,38 @@ header button{
         width: 100%;
         max-width:40px; 
     }
-    
-    
-    .bunschoterweg li{
-        
-        margin: 10px;
-        
-    }
-    
-    .bunschoterweg p{
-        padding: 10px;
-        
-    }
-    
-    
-    
-    .bunschoterwegimg {   
-            height: auto;
-            width: 100%;
-            max-width: 1440px;
-            border: solid 1px #F7A100;
-        }
+            
+            @media screen and (max-width: 457px) {
+                .filter {
+                    display: flex;
+                    justify-content: start;
+                    padding: 5px;
+                }
+                .avatars h2{
+                    position: absolute;
+                    left: 0em;
+                    margin: 5px;
+                    top: 2.7em;
+                    font-size: 1.5em;
+                }
+                }
+                
+                @media screen and (max-width: 950px) {
+                    .houses{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 1.125em;
+                        padding: 50px;
+                    }
+                }
+                
+                @media screen and (max-width: 768px) {
+                    .houses{
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        gap: 3em;
+                        padding: 50px;
+                    }
+                }
 
-    
-
-@media screen and (max-width: 457px) {
-.filter {
-    display: flex;
-    justify-content: start;
-    padding: 5px;
-}
-.avatars h2{
-    position: absolute;
-    left: 0em;
-    margin: 5px;
-    top: 2.7em;
-    font-size: 1.5em;
-}
-}
-
-@media screen and (max-width: 950px) {
-    .houses{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.125em;
-        padding: 50px;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .houses{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 3em;
-        padding: 50px;
-    }
-}
+            

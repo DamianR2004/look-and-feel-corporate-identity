@@ -151,7 +151,7 @@ header button{
     border: none;
     background-color: transparent;
     font-size: 1.5em;
-    padding: 10px;
+    padding: 1px;
 
 
 }
@@ -226,12 +226,12 @@ header button{
     color: var(--TextAlt);
 }
 
-.avatarhouse11{
+.avatarhouse11, .miniavatar22, .miniavatar2 {
     padding: 10px;
     float: right;
-    height: auto;
-    width: 100%;
-    max-width:40px; 
+    height: 60px;
+    width: 60px;
+    max-width: 60px; 
 }
 
 
@@ -249,13 +249,6 @@ header button{
     
 }
 
-.miniavatar22{
-    padding: 10px;
-    float: right;
-    height: 60px;
-    width: 60px;
-    max-width:40px; 
-}
 
 
 .amsterdamseweg li, .bunschoterweg li, .raadhuisstraat li{
@@ -268,15 +261,7 @@ header button{
     padding: 10px;
     
 }
-    
-    .miniavatar2{
-        padding: 10px;
-        float: right;
-        height: auto;
-        width: 100%;
-        max-width:40px; 
-    }
-            
+          
             @media screen and (min-width: 457px) {
                 .filter {
                     display: flex;

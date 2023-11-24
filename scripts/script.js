@@ -17,10 +17,7 @@ const hetMenu = document.querySelector(".hoofdmenu");
 
 function openMenu() {
     hetMenu.classList.toggle("open");
-function closeMenu () {
-    hetMenu.classList.toggle("close")
-}
 }
 
 menuButton.addEventListener("click", openMenu);
-menuButton.addEventListener("click", closeMenu);
+

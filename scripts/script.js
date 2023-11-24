@@ -17,18 +17,10 @@ const hetMenu = document.querySelector(".hoofdmenu");
 
 function openMenu() {
     hetMenu.classList.toggle("open");
+function closeMenu () {
+    hetMenu.classList.toggle("close")
+}
 }
 
 menuButton.addEventListener("click", openMenu);
-
-// Niet zelf geschreven/
-
-const menuButton2 = document.querySelector("header button");
-const hetMenu2 = document.querySelector(".hoofdmenu");
-const button2 = document.querySelector(".button2");
-
-function toggleMenu() {
-    hetMenu.classList.toggle("open");
-}
-
-
+menuButton.addEventListener("click", closeMenu);

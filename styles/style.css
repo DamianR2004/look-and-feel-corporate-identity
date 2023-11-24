@@ -24,20 +24,20 @@
     --PrimaryColor0: #F7A100;
     --PrimaryColor2: #F7A100;
     --PrimaryColor10: #F8c463;
+    --PrimaryInverted: #121212;
+    --primaryInverted10: #181818;
+    --PrimaryInverted20: #404040;
+    --PrimaryInverted30: #282828;
     --SecondaryBackground: #FFFFFF;
     --TextColorInverted: #FFFFFF;
     --Gallery0: #EDEDED;
     --Gallery1: #CCCCCC;
     --TextColor: #333333;
     --TextAlt: #0071B3;
-    --fontP: 16px;
-    --fontH1: 45px;
-    --fontH2: 34px;
-    --fontH3: 24px;
-    --Darkmode0: #121212;
-    --Darkmode10: #181818;
-    --Darkmode20: #404040;
-    --Darkmode30: #282828;
+    --fontNormal: 16px;
+    --fontExtraLarge: 45px;
+    --fontLarge: 34px;
+    --fontMedium: 24px;
 }
 
 
@@ -48,26 +48,26 @@
     --PrimaryColor0: #282828;
     --PrimaryColor2: #F7A100;
     --PrimaryColor10: #F8c463;
+    --PrimaryInverted: #121212;
+    --primaryInverted10: #181818;
+    --PrimaryInverted20: #404040;
+    --PrimaryInverted30: #282828;
     --SecondaryBackground: #121212;
     --Gallery0: #282828;
     --Gallery1: #CCCCCC;
     --TextColor: #FFFFFF;
     --TextColorInverted: #FFFFFF;
     --TextAlt: #f7a100;
-    --fontP: 16px;
-    --fontH1: 45px;
-    --fontH2: 34px;
-    --fontH3: 24px;
-    --Darkmode0: #121212;
-    --Darkmode10: #181818;
-    --Darkmode20: #404040;
-    --Darkmode30: #282828;
+    --fontNormal: 16px;
+    --fontExtraLarge: 45px;
+    --fontLarge: 34px;
+    --fontmMedium: 24px;
 
 
 }
 
 body{
-    background-color: var(--Darkmode0);
+    background-color: var(--PrimaryInverted);
 }
 }
 
@@ -112,9 +112,6 @@ svg {
 
 }
 
-
-
-
 .hoofdmenu li{
     list-style: none;
     top: 10;
@@ -156,6 +153,19 @@ header button{
 
 }
 
+
+dialog {
+    position: absolute;
+    top: 300px;
+    left: 550px;
+    border: none ;
+    border-radius: 5px;
+    box-shadow: 0;
+    padding: 1.6rem;
+    max-width: 400px;
+    filter: blur(8px);
+  }
+
 .add-button{
     height: 60px;
     width: 90px;
@@ -178,18 +188,20 @@ header button{
     border: 6px solid var(--PrimaryColor2);
     padding-bottom: 20px;
     border-left: solid var(--SecondaryBackground);
-    border-right: solid var(--S);
+    border-right: solid var(--SecondaryBackground);
     border-top: 1em;
-
+    block-size: auto;
 }
+
 
 
 .avatars img{
     height: 70px;
     width: 70px;
-    border: solid 2px var(--Darkmode20);
+    border: solid 2px var(--PrimaryInverted20);
     border-radius: 50%;
     margin-bottom: 15px;
+   
 }
 
 .filter{
@@ -204,7 +216,7 @@ header button{
     display: flex;
     justify-content: center;
     margin: 70px;
-    font-size: var(--fontH1);
+    font-size: var(--fontLarge);
     color: var(--TextColor);
 }
 
@@ -279,8 +291,14 @@ header button{
                 .houses{
                     display: grid;
                     grid-template-columns: 1fr;
-                    gap: 1.125em;
-                    padding: 50px;
+                }
+                header button{
+    
+                    border: none;
+                    background-color: transparent;
+                    font-size: 1.5em;
+                    padding: 20px;
+                
                 }
                 
             }
@@ -289,8 +307,7 @@ header button{
                     .houses{
                         display: grid;
                         grid-template-columns: 1fr 1fr;
-                        gap: 1.125em;
-                        padding: 50px;
+                       
                     }
                 }
                 
@@ -298,7 +315,7 @@ header button{
                     .houses{
                         display: grid;
                         grid-template-columns: 1fr 1fr 1fr;
-                        gap: 1.125em;
-                        padding: 50px;
+                    
+                      
                     }
                 }

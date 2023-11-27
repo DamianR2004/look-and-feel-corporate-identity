@@ -60,8 +60,6 @@
 
   body {
     background-color: var(--PrimaryInverted);
-    height:100%;
-    width:100%;
   }
 }
 
@@ -199,6 +197,9 @@ span {
 }
 
 .tooltip .tooltiptext {
+position: absolute;
+top: 5em;
+left:-7em;
   visibility: hidden;
   width: 150px;
   background-color: var(--SecondaryBackground);

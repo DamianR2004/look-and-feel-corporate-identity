@@ -1,321 +1,350 @@
 @font-face {
-    font-family: "Proxima Nova";
-    font-weight: 400;
-    src:
-      url("../assets/fonts/ProximaNova-Medium_2770618388[2258].otf") format("opentype")
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  src: url("../assets/fonts/ProximaNova-Medium_2770618388[2258].otf")
+    format("opentype");
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Proxima Nova;
-    list-style: none;
-    line-height: 1.5em;
-    font-weight: 400;
-    text-decoration: none;
-   
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Proxima Nova;
+  list-style: none;
+  line-height: 1.5em;
+  font-weight: 400;
+  text-decoration: none;
 }
 
-
-
-:root{ 
-    --PrimaryColor0: #F7A100;
-    --PrimaryColor2: #F7A100;
-    --PrimaryColor10: #F8c463;
-    --PrimaryInverted: #121212;
-    --primaryInverted10: #181818;
-    --PrimaryInverted20: #404040;
-    --PrimaryInverted30: #282828;
-    --SecondaryBackground: #FFFFFF;
-    --TextColorInverted: #FFFFFF;
-    --Gallery0: #EDEDED;
-    --Gallery1: #CCCCCC;
-    --TextColor: #333333;
-    --TextAlt: #0071B3;
-    --fontNormal: 16px;
-    --fontExtraLarge: 45px;
-    --fontLarge: 34px;
-    --fontMedium: 24px;
+:root {
+  --PrimaryColor0: #f7a100;
+  --PrimaryColor2: #f7a100;
+  --PrimaryColor10: #f8c463;
+  --PrimaryInverted: #121212;
+  --primaryInverted10: #181818;
+  --PrimaryInverted20: #404040;
+  --PrimaryInverted30: #282828;
+  --SecondaryBackground: #ffffff;
+  --TextColorInverted: #ffffff;
+  --Gallery0: #ededed;
+  --Gallery1: #cccccc;
+  --TextColor: #333333;
+  --TextAlt: #0071b3;
+  --fontNormal: 16px;
+  --fontExtraLarge: 45px;
+  --fontLarge: 34px;
+  --fontMedium: 24px;
 }
-
-
 
 @media (prefers-color-scheme: dark) {
-
-    :root{
+  :root {
     --PrimaryColor0: #282828;
-    --PrimaryColor2: #F7A100;
-    --PrimaryColor10: #F8c463;
+    --PrimaryColor2: #f7a100;
+    --PrimaryColor10: #f8c463;
     --PrimaryInverted: #121212;
     --primaryInverted10: #181818;
     --PrimaryInverted20: #404040;
     --PrimaryInverted30: #282828;
     --SecondaryBackground: #121212;
     --Gallery0: #282828;
-    --Gallery1: #CCCCCC;
-    --TextColor: #FFFFFF;
-    --TextColorInverted: #FFFFFF;
+    --Gallery1: #cccccc;
+    --TextColor: #ffffff;
+    --TextColorInverted: #ffffff;
     --TextAlt: #f7a100;
     --fontNormal: 16px;
     --fontExtraLarge: 45px;
     --fontLarge: 34px;
     --fontmMedium: 24px;
+  }
 
-
-}
-
-body{
+  body {
     background-color: var(--PrimaryInverted);
-}
-}
-
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--PrimaryColor2);
-    width: 100%;
-    height: 62px;
+  }
 }
 
-header img{
-    height: 30px;
-    width: auto;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--PrimaryColor2);
+  width: 100%;
+  height: 62px;
+}
+
+header img {
+  height: 30px;
+  width: auto;
 }
 
 svg {
-    fill: var(--TextColorInverted);
+  fill: var(--TextColorInverted);
 }
 
-.rechtermenu ul{
-    display: flex;
-    gap: 20px;
-    padding: 20px;
+.rechtermenu ul {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
 }
 
 .favorieten {
+  display: flex;
+  justify-content: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.rechtermenu a {
+  text-decoration: none;
+  color: var(--TextColorInverted);
+}
+
+.hoofdmenu li {
+  list-style: none;
+  top: 10;
+  right: 0;
+}
+
+.hoofdmenu {
+  position: fixed;
+  background-color: var(--PrimaryColor0);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  translate: -100% 0%;
+  transition: 0.5s;
+  padding: 5em 1em 1em;
+  inset: 0;
+  z-index: 9999;
+}
+.hoofdmenu.open {
+  translate: 0% 0;
+}
+
+.hoofdmenu a {
+  position: relative;
+  color: var(--TextColorInverted);
+  text-decoration: none;
+}
+
+header button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+dialog {
+  position: absolute;
+  top: 300px;
+  left: 550px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0;
+  padding: 1.6rem;
+  max-width: 400px;
+  filter: blur(8px);
+}
+
+.add-button {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  background: var(--Gallery0);
+  color: var(--TextColor);
+  border: solid 2px var(--PrimaryColor2);
+  padding: 0;
+  margin-left: 40px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.leden {
+  color: var(--TextColorInverted);
+  padding-left: 24px;
+  margin-top: 10px;
+}
+
+span {
+  content: "\2139";
+  color: var(--TextColorInverted);
+}
+
+.avatars {
+  display: flex;
+  align-items: start;
+  border: solid 1px var(--PrimaryColor2);
+  border-left: solid var(--SecondaryBackground);
+  border-right: solid var(--SecondaryBackground);
+  padding-top: 1em;
+  block-size: auto;
+  font-size: var(--fontNormal);
+  color: var(--TextColor);
+}
+
+.tooltip {
+  position: relative;
+  display: flex;
+  border-bottom: 1px var(--PrimaryInverted);
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: var(--SecondaryBackground);
+  color: var(--TextColor);
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  display: flex;
+  visibility: visible;
+  transition: 0.1s;
+}
+
+.avatars img {
+  height: 70px;
+  margin-left: 15px;
+  width: 70px;
+  border: solid 2px var(--PrimaryInverted20);
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.filter {
+  margin-top: 1em;
+  margin-left: 2.8em;
+  padding: 5px;
+}
+
+.fav h2 {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  border: solid 1px var(--PrimaryColor2);
+  border-left: solid var(--SecondaryBackground);
+  border-right: solid var(--SecondaryBackground);
+  border-top: 1em;
+  block-size: auto;
+  font-size: var(--fontLarge);
+  color: var(--TextColor);
+}
+
+.houses {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.125em;
+  padding: 50px;
+}
+
+.houses li {
+  color: var(--TextColor);
+}
+
+.houses a {
+  color: var(--TextAlt);
+}
+
+.avatarhouse11,
+.miniavatar22,
+.miniavatar2 {
+  padding: 10px;
+  float: right;
+  height: 60px;
+  width: 60px;
+  max-width: 60px;
+}
+
+.raadhuisstraatimg,
+.amsterdamsewegimg,
+.bunschoterwegimg {
+  height: auto;
+  width: 100%;
+  max-width: 1440px;
+  border: solid 1px var(--PrimaryColor0);
+}
+
+.amsterdamseweg,
+.raadhuisstraat,
+.bunschoterweg {
+  background-color: var(--Gallery0);
+}
+
+.amsterdamseweg li,
+.bunschoterweg li,
+.raadhuisstraat li {
+  margin: 10px;
+}
+
+.amsterdamseweg p,
+.bunschoterweg p,
+.raadhuisstraat p {
+  padding: 10px;
+}
+
+@media screen and (min-width: 457px) {
+  .filter {
     display: flex;
-    justify-content: center;
-}
- 
+    justify-content: start;
+    padding: 5px;
+  }
+  .avatars h2 {
+    position: absolute;
+    left: 0em;
+    margin: 5px;
+    top: 2.7em;
+    font-size: 1.5em;
+  }
 
-.left{
-    display: flex;
-    align-items: center;
-}
-
-.rechtermenu a{
-    text-decoration: none;
-    color: var(--TextColorInverted);
-
-}
-
-.hoofdmenu li{
-    list-style: none;
-    top: 10;
-    right: 0;
-}   
-
-.hoofdmenu{
-    position: fixed;
-    background-color: var(--PrimaryColor0);
-    top: 0;
-    bottom: 0;
-    left:0;
-    translate: -100% 0%;
-    transition: .5s;
-    padding: 5em 1em 1em;
-    inset: 0;
-    z-index:9999;
-    
-}
-.hoofdmenu.open{
-    translate:0% 0;
-    
-}
-
-.hoofdmenu a{
-    position: relative;
-    color: var(--TextColorInverted);
-    text-decoration: none;
-    
-}
-
-header button{
-    
+  .houses {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  header button {
     border: none;
     background-color: transparent;
     font-size: 1.5em;
-    padding: 10px;
-
-
-}
-
-
-dialog {
-    position: absolute;
-    top: 300px;
-    left: 550px;
-    border: none ;
-    border-radius: 5px;
-    box-shadow: 0;
-    padding: 1.6rem;
-    max-width: 400px;
-    filter: blur(8px);
+    padding: 20px;
   }
-
-.add-button{
-    height: 60px;
-    width: 90px;
-    cursor: pointer;
-    background: var(--Gallery0);
-    color: var(--TextColor);
-    border: solid 2px var(--PrimaryColor2);
-    padding: 5px 5px;
-    border-radius: 3px;
-
 }
 
-
-
-.avatars {
-    display: flex;
-    justify-content: center;
-    margin-top: 4em;
-    gap: 20px;
-    border: 6px solid var(--PrimaryColor2);
-    padding-bottom: 20px;
-    border-left: solid var(--SecondaryBackground);
-    border-right: solid var(--SecondaryBackground);
-    border-top: 1em;
-    block-size: auto;
-}
-
-
-
-.avatars img{
-    height: 70px;
-    width: 70px;
-    border: solid 2px var(--PrimaryInverted20);
-    border-radius: 50%;
-    margin-bottom: 15px;
-   
-}
-
-.filter{
-    margin-top: 1em;
-    margin-left: 2.8em;
-    padding: 5px;
-
-}
-
-
-.fav h2{
-    display: flex;
-    justify-content: center;
-    margin: 70px;
-    font-size: var(--fontLarge);
-    color: var(--TextColor);
-}
-
-
-
-.houses{
+@media screen and (min-width: 748px) {
+  .houses {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.125em;
-    padding: 50px;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+
+
+  .leden{
+    color: var(--TextColorInverted);
+    padding-left: 24px;
+    margin-top: 10px;
+
 }
 
-
-.houses li{
-    color: var(--TextColor);
 }
 
-.houses a{
-    color: var(--TextAlt);
+@media screen and (min-width: 1366px) {
+  .houses {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
-.avatarhouse11, .miniavatar22, .miniavatar2 {
-    padding: 10px;
-    float: right;
-    height: 60px;
-    width: 60px;
-    max-width: 60px; 
-}
+@media screen and (max-width: 748px) {
+    .leden {
+      display: none;
+    }   
 
-
-.raadhuisstraatimg, .amsterdamsewegimg, .bunschoterwegimg{   
-        height: auto;
-        width: 100%;
-        max-width: 1440px;
-        border: solid 1px var(--PrimaryColor0);
+    .avatars{
+        display: flex;
+        justify-content: center;
     }
-
-
-
-.amsterdamseweg, .raadhuisstraat, .bunschoterweg{
-    background-color: var(--Gallery0);
-    
-}
-
-
-
-.amsterdamseweg li, .bunschoterweg li, .raadhuisstraat li{
-    
-    margin: 10px;
-    
-}
-
-.amsterdamseweg p , .bunschoterweg p, .raadhuisstraat p{
-    padding: 10px;
-    
-}
-          
-            @media screen and (min-width: 457px) {
-                .filter {
-                    display: flex;
-                    justify-content: start;
-                    padding: 5px;
-                }
-                .avatars h2{
-                    position: absolute;
-                    left: 0em;
-                    margin: 5px;
-                    top: 2.7em;
-                    font-size: 1.5em;
-                }
-
-                .houses{
-                    display: grid;
-                    grid-template-columns: 1fr;
-                }
-                header button{
-    
-                    border: none;
-                    background-color: transparent;
-                    font-size: 1.5em;
-                    padding: 20px;
-                
-                }
-                
-            }
-                
-                @media screen and (min-width: 748px) {
-                    .houses{
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                       
-                    }
-                }
-                
-                @media screen and (min-width: 1366px) {
-                    .houses{
-                        display: grid;
-                        grid-template-columns: 1fr 1fr 1fr;
-                    
-                      
-                    }
-                }
+  }

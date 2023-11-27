@@ -334,11 +334,6 @@ left:-7em;
     grid-template-columns: 1fr 1fr;
   }
 
-body{
-  overflow-x: hidden;
-}
-  
-
 
   .leden{
     color: var(--TextColor);

@@ -61,7 +61,6 @@
 
   body {
     background-color: var(--PrimaryInverted);
-    overflow-y: hidden;
   }
   
 }
@@ -334,6 +333,10 @@ left:-7em;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+body{
+  overflow-x: hidden;
+}
   
 
 

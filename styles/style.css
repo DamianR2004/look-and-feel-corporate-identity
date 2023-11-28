@@ -26,12 +26,12 @@
   --primaryInverted10: #181818;
   --PrimaryInverted20: #404040;
   --PrimaryInverted30: #282828;
-  --SecondaryBackground: #ffffff;
+  --SecondaryBackground: #ffffff; 
   --TextColorInverted: #ffffff;
   --Gallery0: #ededed;
   --Gallery1: #cccccc;
   --TextColor: #333333;
-  --TextAlt: #0071b3;
+  --TextAlt: #0071b3; 
   --fontNormal: 16px;
   --fontExtraLarge: 45px;
   --fontLarge: 34px;
@@ -149,7 +149,6 @@ dialog {
   box-shadow: 0;
   padding: 1.6rem;
   max-width: 400px;
-  filter: blur(8px);
 }
 
 .add-button {
@@ -183,9 +182,18 @@ span {
   border-left: solid var(--SecondaryBackground);
   border-right: solid var(--SecondaryBackground);
   padding-top: 1em;
-  block-size: auto;
   font-size: var(--fontNormal);
   color: var(--TextColor);
+}
+
+
+.avatars img {
+  height: 70px;
+  margin-left: 15px;
+  width: 70px;
+  border: solid 2px var(--PrimaryInverted20);
+  border-radius: 50%;
+  margin-bottom: 15px;
 }
 
 .tooltip {
@@ -222,14 +230,6 @@ left:-7em;
   
 }
 
-.avatars img {
-  height: 70px;
-  margin-left: 15px;
-  width: 70px;
-  border: solid 2px var(--PrimaryInverted20);
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
 
 .filter {
   margin-top: 1em;

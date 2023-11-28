@@ -3,16 +3,21 @@ Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uit
 De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 # Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+Funda Favorietenpagina v3
 
 ## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+Ik ben deze keer weer verder gegaan met de funda website, de feedback van de vorige keer was vooral gericht op het responsive maken van mijn header en het verduidelijken van wat onderdelen binnen mijn website. Door het volgen van verschillende workshops/challenges heb ik het voor elkaar gekregen, en alles weggewerkt. Hieronder staat een foto van de website:
+<img width="1512" alt="Scherm­afbeelding 2023-11-28 om 14 52 09" src="https://github.com/DamianR2004/look-and-feel-corporate-identity/assets/144007686/a7fa3d97-5c83-4077-9e2f-90e89cdfe22f">
+
+
+Mobile:
+
+![IMG_4233](https://github.com/DamianR2004/look-and-feel-corporate-identity/assets/144007686/eb512ac8-8862-4706-a9ca-99c1f9aa7e2b)
+
+
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
-
+De afgelopen weken heb ik vooral gefocust op een darkmode binnen mijn website. Hiervoor heb ik gebruik gemaakt van custom properties. De darkmode werkt op basis van de preferences van het OS. Dus als ik mijn instellingen terug op 'lightmode' zet krijg ik een witte pagina ervoor terug.
 ## Bronnen
 
 ## Licentie

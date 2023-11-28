@@ -16,8 +16,12 @@ Mobile:
 
 
 
+
+
+link naar de website: https://damianr2004.github.io/look-and-feel-corporate-identity/
+
 ## Kenmerken
-De afgelopen weken heb ik vooral gefocust op een darkmode binnen mijn website. Hiervoor heb ik gebruik gemaakt van custom properties. De darkmode werkt op basis van de preferences van het OS. Dus als ik mijn instellingen terug op 'lightmode' zet krijg ik een witte pagina ervoor terug.
+De afgelopen weken heb ik vooral gefocust op een darkmode binnen mijn website. Hiervoor heb ik gebruik gemaakt van custom properties. De darkmode werkt op basis van de preferences van het OS. Dus als ik mijn instellingen terug op 'lightmode' zet krijg ik een witte pagina ervoor terug. Ook heb ik mijn css herschreven en beter gestructureerd zo is het duidelijker en makkelijker aan te passen mocht het nodig zijn. 
 ## Bronnen
 
 ## Licentie

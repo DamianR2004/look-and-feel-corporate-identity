@@ -128,7 +128,6 @@ svg {
 }
 
 .hoofdmenu a {
-  position: relative;
   color: var(--TextColorInverted);
   text-decoration: none;
 }
@@ -184,6 +183,7 @@ span {
   padding-top: 1em;
   font-size: var(--fontNormal);
   color: var(--TextColor);
+ 
 }
 
 
@@ -194,6 +194,10 @@ span {
   border: solid 2px var(--PrimaryInverted20);
   border-radius: 50%;
   margin-bottom: 15px;
+}
+
+.avatars .leden{
+  margin-left: 25px;
 }
 
 .tooltip {

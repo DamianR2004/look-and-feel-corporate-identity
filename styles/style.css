@@ -177,9 +177,7 @@ span {
 .avatars {
   display: flex;
   align-items: start;
-  border: solid 1px var(--PrimaryColor2);
-  border-left: solid var(--SecondaryBackground);
-  border-right: solid var(--SecondaryBackground);
+  border-bottom: solid 1px var(--PrimaryColor2);
   padding-top: 1em;
   font-size: var(--fontNormal);
   color: var(--TextColor);
@@ -245,9 +243,7 @@ left:-7em;
   display: flex;
   justify-content: center;
   padding: 30px;
-  border: solid 1px var(--PrimaryColor2);
-  border-left: solid var(--SecondaryBackground);
-  border-right: solid var(--SecondaryBackground);
+  border-bottom: solid 1px var(--PrimaryColor2);
   border-top: 1em;
   block-size: auto;
   font-size: var(--fontLarge);

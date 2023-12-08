@@ -61,7 +61,7 @@
 
 html, body{
   max-width: 100%;
-    overflow-x: hidden;
+   overflow-x: hidden;
 }
 
 
@@ -240,7 +240,7 @@ left:-7em;
 
 
 .filter {
-  margin-top: 1em;
+  margin-top: 2.2em;
   margin-left: 2.8em;
   padding: 5px;
 }
@@ -306,6 +306,15 @@ left:-7em;
 .bunschoterweg p,
 .raadhuisstraat p {
   padding: 10px;
+}
+
+.contact , .versturen, .verzonden{
+  color: var(--TextColorInverted);
+}
+
+footer{
+  display: grid;
+ grid-template-areas: 1fr 1fr 1fr 1fr;
 }
 
 @media screen and (min-width: 457px) {
